@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import About from './components/About';
-import Nav from './components/Nav'
-import Gallery from './components/Gallery'
+import Nav from './components/Nav';
+import Gallery from './components/Gallery';
 
 function App() {
   const [categories] = useState([
     {
         name: "commercial",
-        description: "Photos of grocery stores, food trucks, and other commercial projects",
+        description: "Photos of grocery stores, food trucks, and other commercial projects"
     },
     {
         name: "portraits",
@@ -19,9 +19,10 @@ function App() {
     },
     {
         name: "landscape",
-        description: "Fields, farmhouses, waterfalls, and the beauty of nature",
+        description: "Fields, farmhouses, waterfalls, and the beauty of nature"
     }
   ]);
+
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
@@ -32,7 +33,7 @@ function App() {
         currentCategory={currentCategory}
       />
       <main>
-        <Gallery />
+        <Gallery currentCategory={currentCategory} />
         <About />
       </main>
     </div>
